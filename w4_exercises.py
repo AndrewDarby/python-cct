@@ -5,10 +5,16 @@
     the items in the list.
     Bonus: Try using type declaration for the argument.
 """
-def print_list(list_to_parse):
-    """TODO: Add docstring"""
+
+
+def print_list(list_to_parse: []):
+    """
+    print out list of items
+    """
     for item in list_to_parse:
         print(item)
+
+print_list(["milk","eggs"])
 """
     =========== Exercise 2 =============
     Implement the delete_item() function
@@ -18,7 +24,8 @@ def print_list(list_to_parse):
     an item from a list.
 """
 def delete_item(list_to_parse, item_index):
-    """Takes a list, removes an item at the 
+    """
+    Takes a list, removes an item at the 
     specified index and returns the list
     Parameters
     ----------
@@ -31,7 +38,9 @@ def delete_item(list_to_parse, item_index):
     The list with the item removed
     """
     # Do stuff here
-    pass # This just tells python to do nothing; remove it when you add your code
+    list_to_parse.pop(item_index)
+    return list_to_parse
+
 shopping_list = ["eggs", "ham", "sausages"] # A test list to remove an item from
 shopping_list = delete_item(shopping_list, 1) # Should remove 'ham' from the list
-print(shopping_list)
+print_list(shopping_list)
