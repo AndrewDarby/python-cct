@@ -42,5 +42,5 @@ def delete_item(list_to_parse, item_index):
     return list_to_parse
 
 shopping_list = ["eggs", "ham", "sausages"] # A test list to remove an item from
-shopping_list = delete_item(shopping_list, 1) # Should remove 'ham' from the list
+shopping_list = delete_item(shopping_list, 2) # Should remove 'ham' from the list
 print_list(shopping_list)
